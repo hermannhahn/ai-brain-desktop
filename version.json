@@ -1,5 +1,6 @@
-﻿{
-    "download_url":  "https://github.com/hermannhahn/ai-brain-desktop/releases/download/v2.5.59/AI-Bridge-Setup-v2.5.59.exe",
-    "version":  "2.5.59",
-    "notes":  "Atualização oficial para AI-Brain Desktop (v2.5.59) — Banner E2EE compacto em linha única com Safety Number expansível."
+{
+    "service_name": "ai-bridge",
+    "version": "2.5.76",
+    "download_url": "https://github.com/hermannhahn/ai-brain-desktop/releases/download/v2.5.76/MEMO-Desktop-Setup-v2.5.76.exe",
+    "notes": "<!-- lang:en -->\n**Summary:** Configured dual-repository release publishing to memo-desktop and legacy fallback ai-brain-desktop.\n\n**Highlights:**\n- Official downloads repository set to hermannhahn/memo-desktop\n- Legacy fallback downloads repository set to hermannhahn/ai-brain-desktop for backwards compatibility\n- Full release assets published to both repositories simultaneously\n\n<!-- lang:pt -->\n**Resumo:** Configuracao de publicacao simultanea em memo-desktop e no fallback legado ai-brain-desktop.\n\n**Destaques:**\n- Repositorio oficial de downloads configurado para hermannhahn/memo-desktop\n- Repositorio legado de fallback configurado para hermannhahn/ai-brain-desktop para retrocompatibilidade\n- Todos os instaladores e binarios publicados em ambos os repositorios simultaneamente"
 }

@@ -3,6 +3,515 @@
 ---
 
 
+## Release - v2.5.76
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+**Summary:** Configured dual-repository release publishing to memo-desktop and legacy fallback ai-brain-desktop.
+
+**Highlights:**
+- Official downloads repository set to hermannhahn/memo-desktop
+- Legacy fallback downloads repository set to hermannhahn/ai-brain-desktop for backwards compatibility
+- Full release assets published to both repositories simultaneously
+
+<!-- lang:pt -->
+**Resumo:** Configuracao de publicacao simultanea em memo-desktop e no fallback legado ai-brain-desktop.
+
+**Destaques:**
+- Repositorio oficial de downloads configurado para hermannhahn/memo-desktop
+- Repositorio legado de fallback configurado para hermannhahn/ai-brain-desktop para retrocompatibilidade
+- Todos os instaladores e binarios publicados em ambos os repositorios simultaneamente
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.76 (`7f5cca3`)
+- update development branch (`3fa4f0c`)
+
+
+---
+
+
+## Release - v2.5.75
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+**Summary:** Updated release and download repository URLs to memo-desktop.
+
+**Highlights:**
+- Updated download repository URLs from ai-brain-desktop to memo-desktop
+- Updated auto-update checker and installation scripts to use the new repository
+- Published full release assets to hermannhahn/memo-desktop
+
+<!-- lang:pt -->
+**Resumo:** Atualizacao dos links e repositorio de download para memo-desktop.
+
+**Destaques:**
+- Atualizados os links do repositorio de download de ai-brain-desktop para memo-desktop
+- Atualizados o verificador de atualizacoes e os scripts de instalacao para o novo repositorio
+- Publicados todos os artefatos de instalacao no hermannhahn/memo-desktop
+
+### 📋 Changelog da Versão
+
+**Total:** 3 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.75 (`38ffbbe`)
+- update development branch (`d35a4ec`)
+
+#### 🔧 Manutenção / Refatoração
+- remove temporary patch_msg.txt (`ff2919f`)
+
+
+---
+
+
+## Release - v2.5.74
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+**Summary:** Official rebranding to MEMO Desktop and full migration to the MEMOROUTER ecosystem.
+
+**Highlights:**
+- Renamed desktop app to MEMO Desktop with official installer MEMO-Desktop-Setup
+- All backend and WebSocket tunnel endpoints migrated to api.memorouter.com
+- Startup performance optimized by removing background tool downloads
+
+<!-- lang:pt -->
+**Resumo:** Rebranding oficial para MEMO Desktop e migracao completa para o ecossistema MEMOROUTER.
+
+**Destaques:**
+- Aplicativo desktop renomeado para MEMO Desktop com instalador oficial MEMO-Desktop-Setup
+- Todos os endpoints e tunel WebSocket migrados para api.memorouter.com
+- Desempenho de inicializacao otimizado com remocao de downloads em background
+
+### 📋 Changelog da Versão
+
+**Total:** 6 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.74 (`4556a92`)
+- update development branch (`c4f9286`)
+- update development branch (`28e425a`)
+- updates in feature/memorouter-migration (`539aa56`)
+
+#### 📚 Documentação
+- atualiza referencias de memo.exe e MEMO Desktop no dev-cli e diretrizes (`db42974`)
+- atualiza referencias de arquitetura e fallback de download para memorouter e memo desktop (`1c2b796`)
+
+
+---
+
+
+## Release - v2.5.73
+### 📣 Apresentação da Atualização
+
+v2.5.73 - Correção no cadastro de Skills (erro 42P08) <!-- lang:en --> **Summary:** Fixes a database type-inference error that prevented saving skills through the Skills tool. **Highlights:** - SkillSave now works: removed a redundant subquery that reused the $1 SQL parameter in two places, causing PostgreSQL to reject the INSERT with "inconsistent types deduced for parameter $1 (42P08)" - Skills registration (used to catalog project skills, e.g. ai-brain / ai-bridge and their AGENTS.md) is unblocked <!-- lang:pt --> **Resumo:** Corrige um erro de inferência de tipo no banco que impedia salvar skills pela ferramenta de Skills. **Destaques:** - SkillSave voltou a funcionar: removida uma subquery redundante que reutilizava o parâmetro SQL $1 em dois lugares, fazendo o Postgres rejeitar o INSERT com "inconsistent types deduced for parameter $1 (42P08)" - Cadastro de skills (usado para catalogar skills de projetos, ex: ai-brain / ai-bridge e seus AGENTS.md) desbloqueado
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.73 (`310cfc6`)
+
+#### 🐛 Correções
+- corrige erro de tipos inconsistentes no SkillSave (42P08) (`7cf2be8`)
+
+
+---
+
+
+## Release - v2.5.72
+### 📣 Apresentação da Atualização
+
+v2.5.72 - Local Tools: accordion no meio das Configurações + bolinha on/off em tempo real <!-- lang:en --> **Summary:** Moves the Local Tools accordion to the middle of Settings and makes the on/off status dot update immediately on toggle. **Highlights:** - Local Tools accordion repositioned to the middle of the Settings tab (no longer at the top) - Toggling a tool now updates its green/gray status dot instantly, without needing to reload the tab <!-- lang:pt --> **Resumo:** Move o acordeon de Local Tools para o meio das Configurações e faz a bolinha de status ligado/desligado atualizar imediatamente. **Destaques:** - Acordeon de Local Tools reposicionado para o meio da aba Configurações (não fica mais no topo) - Alternar uma ferramenta agora atualiza a bolinha verde/cinza na hora, sem precisar recarregar a aba
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.72 (`d3b9d71`)
+- mover acc.Local Tools p/ meio de Settings e bolinha on/off atualiza imediatamente (`02e07e0`)
+
+
+---
+
+
+## Release - v2.5.71
+### 📣 Apresentação da Atualização
+
+v2.5.71 - Local Tools em Settings (modo lista) + Traccar com hora local <!-- lang:en --> **Summary:** Moves Local Tools into Settings as an accordion (list view) and makes the Traccar container use the host timezone. **Highlights:** - Local Tools removed from the left-side menu; now lives inside Settings as an accordion, rendered as a compact list grouped by category instead of cards - Traccar container now runs with TZ env pulled from the OS where the desktop app is installed (Windows Get-TimeZone / /etc/timezone fallback), so GPS event times show local hours instead of UTC <!-- lang:pt --> **Resumo:** Move Local Tools para dentro de Configurações como acordeon (modo lista) e faz o container Traccar usar o fuso horário do sistema. **Destaques:** - Local Tools saiu do menu lateral; agora vive em Configurações como acordeon, renderizado em lista compacta por grupo em vez de cards - Container Traccar agora roda com TZ detectado do SO onde o desktop está instalado (Windows Get-TimeZone / fallback /etc/timezone), exibindo as horas locais dos eventos GPS em vez de UTC
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.71 (`6b19d5b`)
+- mover Local Tools p/ accordion em Settings (modo lista) e usar TZ do SO no container Traccar (`b937fe4`)
+
+
+---
+
+
+## Release - v2.5.70
+### 📣 Apresentação da Atualização
+
+v2.5.70 - mpv auto-heal silencioso (sem janelas CMD)
+<!-- lang:en -->
+**Summary:** Makes the mpv auto-repair run fully silently on Windows (no more CMD windows popping up).
+**Highlights:**
+- Youtube: taskkill of mpv now runs with hideWindow()/CREATE_NO_WINDOW, matching the existing silent pattern used for the mpv package extraction
+- No CMD windows flash when auto-heal kicks in
+<!-- lang:pt -->
+**Resumo:** Torna a auto-cura do mpv 100% silenciosa no Windows (sem janelas CMD piscando).
+**Destaques:**
+- Youtube: taskkill do mpv agora roda com hideWindow()/CREATE_NO_WINDOW, mesmo padrão silencioso já usado na extração do mpv
+- Nenhuma janela CMD aparece quando a auto-cura é acionada
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.70 (`f873d8e`)
+
+#### 🐛 Correções
+- rodar taskkill do mpv de forma silenciosa (sem janela CMD) (`76daa84`)
+
+
+---
+
+
+## Release - v2.5.69
+### 📣 Apresentação da Atualização
+
+v2.5.68 — mpv file-lock fix + UI/i18n polish
+<!-- lang:en -->
+**Summary:** Fixes the mpv auto-install file-lock error and improves UI translations across languages.
+**Highlights:**
+- Youtube: end mpv process before reinstalling (fixes "file already in use" on Windows)
+- i18n: setLanguage now falls back to English when a key is missing (fixes stale Portuguese text on language switch)
+- i18n: nav .nav-item left-aligned (no more centered labels on long translated text)
+- i18n: added Tracking Users translations for pt-PT, es, fr, de, zh, ru
+- i18n: translated Dashboard KPI cards (Consolidated, Sleep Cycles, RAG Auto-Hit Rate, Eliminated) for es/fr/de/zh/ru
+- UI: removed E2EE Protected badge from header
+- UI: mpv auto-install error messages now in English
+<!-- lang:pt -->
+**Resumo:** Corrige o erro de file-lock no auto-install do mpv e melhora as traduções da interface em todas as línguas.
+**Destaques:**
+- Youtube: encerra o processo do mpv antes de reinstalar (corrige "arquivo já está sendo usado por outro processo" no Windows)
+- i18n: setLanguage agora faz fallback para o inglês quando a chave não existe (corrige texto fantasma em português ao trocar de idioma)
+- i18n: nav .nav-item alinhado à esquerda (sem rótulos centralizados em textos longos traduzidos)
+- i18n: traduções de Tracking Users adicionadas em pt-PT, es, fr, de, zh, ru
+- i18n: cards do Dashboard (Consolidated, Sleep Cycles, RAG Auto-Hit Rate, Eliminated) traduzidos para es/fr/de/zh/ru
+- UI: badge E2EE Protected removido do header
+- UI: mensagens de erro do auto-install do mpv agora em inglês
+
+### 📋 Changelog da Versão
+
+**Total:** 1 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.69 (`6d6a156`)
+
+
+---
+
+
+## Release - v2.5.68
+### 📣 Apresentação da Atualização
+
+v2.5.68 — mpv file-lock fix + UI/i18n polish
+<!-- lang:en -->
+**Summary:** Fixes the mpv auto-install file-lock error and improves UI translations across languages.
+**Highlights:**
+- Youtube: end mpv process before reinstalling (fixes "file already in use" on Windows)
+- i18n: setLanguage now falls back to English when a key is missing (fixes stale Portuguese text on language switch)
+- i18n: nav .nav-item left-aligned (no more centered labels on long translated text)
+- i18n: added Tracking Users translations for pt-PT, es, fr, de, zh, ru
+- i18n: translated Dashboard KPI cards (Consolidated, Sleep Cycles, RAG Auto-Hit Rate, Eliminated) for es/fr/de/zh/ru
+- UI: removed E2EE Protected badge from header
+- UI: mpv auto-install error messages now in English
+<!-- lang:pt -->
+**Resumo:** Corrige o erro de file-lock no auto-install do mpv e melhora as traduções da interface em todas as línguas.
+**Destaques:**
+- Youtube: encerra o processo do mpv antes de reinstalar (corrige "arquivo já está sendo usado por outro processo" no Windows)
+- i18n: setLanguage agora faz fallback para o inglês quando a chave não existe (corrige texto fantasma em português ao trocar de idioma)
+- i18n: nav .nav-item alinhado à esquerda (sem rótulos centralizados em textos longos traduzidos)
+- i18n: traduções de Tracking Users adicionadas em pt-PT, es, fr, de, zh, ru
+- i18n: cards do Dashboard (Consolidated, Sleep Cycles, RAG Auto-Hit Rate, Eliminated) traduzidos para es/fr/de/zh/ru
+- UI: badge E2EE Protected removido do header
+- UI: mensagens de erro do auto-install do mpv agora em inglês
+
+### 📋 Changelog da Versão
+
+**Total:** 4 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.68 (`a70dbae`)
+- updates in development (`db7630c`)
+
+#### 🐛 Correções
+- alinhamento do menu Tracking Users em todas as línguas + traduções dos cards do Dashboard + remoção do badge E2EE do header + mensagens de erro do mpv em inglês (`5801c8a`)
+- encerrar mpv em execução antes de reinstalar (corrige file lock) (`fa3df77`)
+
+
+---
+
+
+## Release - v2.5.67
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+Fix YouTube playback: send correct Track shape (v2.5.67)
+
+Highlights:
+- FIXED the actual root cause of "no audio": the youtube-music-cli expects the PLAY command's track in the shape {videoId, title, artists:[{artistId,name}]}. Our search was normalizing results to {video_id, id, artists:[]string}; sending that raw track made the CLI crash with "undefined is not an object (evaluating 'value.replace')" — so the player was never invoked. Now youtubePlay converts the first search result via searchResultToCLITrack(), guaranteeing videoId + artists as objects, which actually starts playback.
+
+<!-- lang:pt -->
+Correção da reprodução do YouTube: formato Track correto (v2.5.67)
+
+Destaques:
+- CORRIGE a causa raiz real do "nenhum áudio": o youtube-music-cli espera no comando PLAY um track no formato {videoId, title, artists:[{artistId,name}]}. Nossa busca normalizava para {video_id, id, artists:[]string}; ao enviar esse track cru, o CLI quebrava com "undefined is not an object (evaluating 'value.replace')" — e o player nunca era chamado. Agora o youtubePlay converte o primeiro resultado via searchResultToCLITrack(), garantindo videoId + artists como objetos, o que de fato inicia a reprodução.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.67 (`1b2af9f`)
+
+#### 🐛 Correções
+- enviar track no formato Track correto do CLI (corrige 'value.replace') (`61a5977`)
+
+
+---
+
+
+## Release - v2.5.66
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+Real mpv auto-heal + agent container labels fix (v2.5.66)
+
+Highlights:
+- FIXED the auto-heal not running: YouTubeToolsReady now requires a complete mpv (mpv.exe + official libmpv-*.dll). A broken mpv.exe (e.g. only d3dcompiler_43.dll) no longer counts as "ready", so the app ALWAYS runs ensurePortableMPV on the youtube tool start. If the mpv is broken/incomplete, it now deletes it and downloads the complete portable package (mpv.exe + all runtime DLLs + embedded ffmpeg).
+- Agent-created containers now ALWAYS get the managed_by/agent_project/agent_id labels, so the agent can use (exec) the container it created without restrictions, regardless of the Agent Container sandbox setting.
+
+<!-- lang:pt -->
+Auto-cura real do mpv + correção de labels em containers (v2.5.66)
+
+Destaques:
+- CORRIGE o auto-cura que não rodava: YouTubeToolsReady agora exige mpv íntegro (mpv.exe + lib oficial libmpv-*.dll). Um mpv.exe quebrado (ex.: só d3dcompiler_43.dll) não conta mais como pronto, então o app SEMPRE roda o ensurePortableMPV ao iniciar a ferramenta de YouTube. Se o mpv estiver quebrado/incompleto, agora ele o apaga e baixa o pacote portátil completo (mpv.exe + todas as DLLs + ffmpeg embutido).
+- Containers criados pelo agente agora recebem SEMPRE as labels managed_by/agent_project/agent_id, então o agente consegue usar (exec) o container que criou sem restrições, independente do modo sandbox no Agent Container.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.66 (`009c243`)
+
+#### 🐛 Correções
+- auto-heal do mpv de fato + labels sempre injetadas (`a4aeee9`)
+
+
+---
+
+
+## Release - v2.5.65
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+Complete portable mpv self-heal fix (v2.5.65)
+
+Highlights:
+- Fixed audio still not playing: the integrity check now requires the actual mpv runtime library (mpv-1.dll / mpv-2.dll / libmpv*.dll), not just any DLL. A broken install that only had d3dcompiler_43.dll was wrongly treated as complete.
+- Auto-heal: if the official mpv library is missing, the app removes the broken install and downloads the complete portable package (shinchiro/mpv-winbuild-cmake) — works on any Windows 10/11.
+
+<!-- lang:pt -->
+Correção de auto-cura do mpv portátil completo (v2.5.65)
+
+Destaques:
+- Corrige o áudio que continuava sem tocar: a verificação de integridade agora exige a biblioteca de runtime real do mpv (mpv-1.dll / mpv-2.dll / libmpv*.dll), e não qualquer DLL. Uma instalação quebrada que só tinha d3dcompiler_43.dll era tratada como completa.
+- Auto-cura: se a biblioteca oficial do mpv estiver faltando, o app remove a instalação quebrada e baixa o pacote portátil completo (shinchiro/mpv-winbuild-cmake) — funciona em qualquer Windows 10/11.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.65 (`c05f704`)
+
+#### 🐛 Correções
+- mpvLooksComplete exige a lib oficial do mpv (auto-cura) (`cd099ff`)
+
+
+---
+
+
+## Release - v2.5.64
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+Complete portable mpv audio fix (v2.5.64)
+
+Highlights:
+- Fixed audio not playing: the app now downloads the COMPLETE portable mpv package (shinchiro/mpv-winbuild-cmake), which includes mpv.exe + all runtime DLLs + embedded ffmpeg, instead of copying from a partial winget install.
+- Self-updatable: resolves the latest mpv release automatically (stays current).
+- Detects and repairs broken/missing mpv installs.
+- Silent mode kept: no CMD/console windows.
+
+<!-- lang:pt -->
+Correção do áudio com mpv portátil completo (v2.5.64)
+
+Destaques:
+- Corrige o áudio que não tocava: o app agora baixa o pacote portátil COMPLETO do mpv (shinchiro/mpv-winbuild-cmake), com mpv.exe + todas as DLLs de runtime + ffmpeg embutido, em vez de copiar de uma instalação winget incompleta.
+- Atualizável: resolve automaticamente a release mais recente do mpv (fica sempre atualizado).
+- Detecta e corrige instalações quebradas/incompletas do mpv.
+- Modo silencioso mantido: sem janelas CMD/console.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.64 (`96f5f98`)
+
+#### 🐛 Correções
+- download complete portable mpv package (full DLLs) (`380cfcc`)
+
+
+---
+
+
+## Release - v2.5.63
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+Audio playback fix (v2.5.63)
+
+Highlights:
+- Silent mode: all local MCP tools (youtube daemon, yt-dlp, winget, installers) now hide the console window via CREATE_NO_WINDOW — no more CMD popping up.
+- Self-contained audio: mpv is now portable and bundled into AppData tools (with a preset mpv.conf: wasapi output, volume 100, no-video, no-terminal). No dependency on a pre-installed mpv on the user's PC — the app installs everything it needs.
+
+<!-- lang:pt -->
+Correção de reprodução de áudio (v2.5.63)
+
+Destaques:
+- Modo silencioso: todas as ferramentas MCP locais (daemon do youtube, yt-dlp, winget, instaladores) agora ocultam a janela de console via CREATE_NO_WINDOW — nada de CMD surgindo na tela.
+- Áudio autocontido: o mpv agora é portátil e instalado dentro do AppData (com mpv.conf pré-configurado: saída wasapi, volume 100, no-video, no-terminal). Sem dependência de mpv pré-instalado no PC do usuário — o app instala tudo que precifica.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.63 (`6f04f50`)
+
+#### 🐛 Correções
+- audio playback portability and silent mode (`c37e759`)
+
+
+---
+
+
+## Release - v2.5.62
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+**Summary:** This update adds the new YouTube Music local tool, letting your AI assistant search and play videos/music on your computer, control playback, and read video transcripts when available.
+
+**Highlights:**
+- New Local Tools card "YouTube Music" for searching YouTube and playing videos/music with play, pause, next, previous, and volume controls.
+- After updating, the app automatically installs the required components, so the tool works on any computer with internet.
+- Video transcripts are read automatically when subtitles are available.
+
+<!-- lang:pt -->
+**Resumo:** Esta atualização adiciona a nova ferramenta local YouTube Music, permitindo que seu assistente de IA procure e toque vídeos/músicas no computador, controle a reprodução e leia a transcrição dos vídeos quando disponível.
+
+**Destaques:**
+- Novo card YouTube Music em Ferramentas Locais para buscar no YouTube e tocar vídeos/músicas com controles de play, pausa, próximo, anterior e volume.
+- Após atualizar, o aplicativo instala automaticamente os componentes necessários, funcionando em qualquer computador com internet.
+- A transcrição do vídeo é lida automaticamente quando há legendas disponíveis.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.62 (`15a33aa`)
+- update development branch (`8b1640d`)
+
+
+---
+
+
+## Release - v2.5.61
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+**Summary:** Fixed the 'Verify Security' button in Settings so the E2EE verification window opens correctly and you can compare the Safety Number with the AI-Brain panel.
+
+**Highlights:**
+- The E2EE Security button now opens the verification modal with the Safety Number, encryption status and counters.
+- Small internal layout fix so the security window is shown above other dialogs.
+
+<!-- lang:pt -->
+**Resumo:** Corrigido o botão 'Verify Security' nas Configurações para que a janela de verificação E2EE abra corretamente e você possa comparar o Safety Number com o painel AI-Brain.
+
+**Destaques:**
+- O botão de segurança E2EE agora abre o modal de verificação com o Safety Number, status da criptografia e contadores.
+- Correção interna de layout para a janela de segurança aparecer acima das demais.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.61 (`54a1b2c`)
+- update development branch (`d1d65bd`)
+
+
+---
+
+
+## Release - v2.5.60
+### 📣 Apresentação da Atualização
+
+<!-- lang:en -->
+**Summary:** This update makes the app simpler and safer: the Agents tab was removed, WhatsApp works again with end-to-end encryption, and the E2EE security details now live in a dedicated section in Settings.
+
+**Highlights:**
+- WhatsApp restored after the end-to-end encryption upgrade.
+- E2EE protection details moved to Settings, under E2EE Encryption.
+- Cleaner navigation with shorter descriptions on the main tabs.
+
+<!-- lang:pt -->
+**Resumo:** Esta atualização deixa o aplicativo mais simples e seguro: a aba Agents foi removida, o WhatsApp voltou a funcionar com criptografia de ponta a ponta e os detalhes de segurança E2EE agora ficam em uma seção própria em Configurações.
+
+**Destaques:**
+- WhatsApp funcionando novamente após a atualização da criptografia de ponta a ponta.
+- Detalhes da proteção E2EE movidos para Configurações, na opção E2EE Encryption.
+- Navegação mais limpa e descrições mais curtas nas abas principais.
+
+### 📋 Changelog da Versão
+
+**Total:** 2 alteração(ões) acumulada(s) desde a última release.
+
+#### ✨ Novidades
+- updates for release v2.5.60 (`98f5246`)
+- update development branch (`4c9428e`)
+
+
+---
+
+
 ## Release - v2.5.59
 ### 📣 Apresentação da Atualização
 
